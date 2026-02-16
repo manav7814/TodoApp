@@ -3,7 +3,7 @@ let currentFilter = "all"; //  all, today, pending, overdue
 let editIndex = null; // Track the index of the task being edited
 
 async function fetchTasks(){
-  const res = await fetch("http://localhost:3000/tasks");
+  const res = await fetch("https://todoapp-5qzv.onrender.com/");
   tasks = await res.json();
   renderTasks();
 }
@@ -162,3 +162,4 @@ function renderTasks() {
 }
 
 renderTasks();
+
