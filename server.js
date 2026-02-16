@@ -34,15 +34,14 @@ app.use(cors());
 // }
 // run().catch(console.dir);
 
-const mongoURL = "process.env.mongodb+srv://todouser:Manav0474@@todocluster.j0py3jz.mongodb.net/?appName=TodoCluster";
+const MONGO_URL = "process.env.mongodb+srv://todouser:Manav0474%40@todocluster.j0py3jz.mongodb.net/?appName=TodoCluster";
 
-console.log("Mongo URL:", mongoURL); // debug
 
-mongoose.connect(mongoURL)
-.then(()=> console.log("MongoDB Connected"))
+
+
+mongoose.connect(process.env.MONGO_URL)
+.then(()=> console.log("MongoDB Atlas Connected"))
 .catch(err=> console.log(err));
-
-
 // Schema
 const taskSchema = new mongoose.Schema({
   name: String,
@@ -79,6 +78,7 @@ app.delete("/tasks/:id", async(req,res)=>{
 });
 
 app.listen(3000, ()=> console.log("Server running on port 3000"));
+
 
 
 
