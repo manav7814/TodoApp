@@ -33,7 +33,7 @@ app.use(cors());
 //   }
 // }
 // run().catch(console.dir);
-mongoose.connect("mongodb+srv://todouser:abc@123@todocluster.j0py3jz.mongodb.net/?appName=TodoCluster")
+mongoose.connect("mongodb+srv://todouser:Manav0474@@todocluster.j0py3jz.mongodb.net/?appName=TodoCluster")
 .then(()=>console.log("Atlas connected"))
 .catch(err=>console.log(err));
 
@@ -74,4 +74,5 @@ app.delete("/tasks/:id", async(req,res)=>{
 });
 
 app.listen(3000, ()=> console.log("Server running on port 3000"));
+
 
