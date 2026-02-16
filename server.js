@@ -51,6 +51,9 @@ const taskSchema = new mongoose.Schema({
 
 const Task = mongoose.model("Task", taskSchema);
 
+app.get("/", (req, res) => {
+    res.send("Todo App API is running");
+});
 
 // GET all tasks
 app.get("/tasks", async(req,res)=>{
@@ -78,6 +81,7 @@ app.delete("/tasks/:id", async(req,res)=>{
 });
 
 app.listen(3000, ()=> console.log("Server running on port 3000"));
+
 
 
 
