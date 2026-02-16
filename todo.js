@@ -50,7 +50,7 @@ async function saveTask() {
 
   if (editIndex !== null) {
 
-    await fetch(`http://localhost:3000/tasks/${tasks[editIndex]._id}`, {
+    await fetch(`https://todoapp-5qzv.onrender.com/tasks/${tasks[editIndex]._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, date })
@@ -60,7 +60,7 @@ async function saveTask() {
 
   } else {
 
-    await fetch("http://localhost:3000/tasks", {
+    await fetch("https://todoapp-5qzv.onrender.com/tasks", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, date, completed:false })
@@ -86,7 +86,7 @@ function editTask(index) { // Open modal with task details for editing
 //   renderTasks(); 
 // }
 async function deleteTask(index) {
-  await fetch(`http://localhost:3000/tasks/${tasks[index]._id}`, {
+  await fetch('https://todoapp-5qzv.onrender.com/tasks/${tasks[index]._id}`, {
     method: "DELETE"
   });
 
@@ -100,7 +100,7 @@ async function deleteTask(index) {
 //   renderTasks();
 // }
 async function toggleComplete(index){
-  await fetch(`http://localhost:3000/tasks/${tasks[index]._id}`, {
+  await fetch(`https://todoapp-5qzv.onrender.com/tasks/${tasks[index]._id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ completed: !tasks[index].completed })
@@ -162,4 +162,5 @@ function renderTasks() {
 }
 
 renderTasks();
+
 
