@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">Todo App</div>
+
+  <div class="container">
+
+    <div class="tabs">
+      <button class="tab active" onclick="filterTasks('today')">Today</button>
+      <button class="tab" onclick="filterTasks('pending')">Pending</button>
+      <button class="tab" onclick="filterTasks('overdue')">Overdue</button>
+      <button class="tab" onclick="filterTasks('all')">All</button>
+    </div>
+
+    <div class="task-header">
+      <h2>Tasks</h2>
+      <button class="add-btn" onclick="openAddModal()">+ Add Task</button>
+    </div>
+
+    <div id="taskList"></div>
+
+    <h3>Completed</h3>
+    <div id="completedList"></div>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Add Task</h3>
+      <input type="text" id="taskName" placeholder="Task name">
+      <input type="date" id="taskDate">
+      <button onclick="saveTask()">Save</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+  </div>
+
+    <!-- <h1>To-Do List 2026</h1>
+    <label for="taskInput"></label><strong></strong>Enter Todays Task:</label> <input type="text" id="taskInput" placeholder="Enter a task" required>
+    <button id="addbtn">Add Task</button>
+
+    <p id="taskCount">Total Tasks : 0</p>
+
+    <ul id="taskList"></ul> -->
+
+    <script src="todo.js"></script>
+</body>
+</html>
